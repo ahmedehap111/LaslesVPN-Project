@@ -1,0 +1,25 @@
+/* section imges */
+.section__imgHuge {
+  display: flex;
+  justify-self: center;
+}
+
+.section__imgHuge {
+  display: flex;
+  justify-self: center;
+}
+
+@media  (max-width: 1024px) {
+  .section__imgHuge,
+  .section__imgSponsored {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .section__imgHuge {
+    display: none;
+  }
+}
+/* end section imges */

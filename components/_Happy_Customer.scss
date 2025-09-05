@@ -1,0 +1,99 @@
+/* section Happy Customer */
+.cards {
+  display: flex;
+  justify-content: space-between;
+  gap: 3rem;
+}
+
+@media  (max-width: 1024px) {
+  .cards {
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+}
+
+@media (max-width: 768px) {
+  .cards {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+}
+.card {
+  width: 40rem;
+  border: 1px solid #dddddd;
+  border-radius: 1rem;
+  padding: 3rem;
+  position: relative;
+  transition: transform 1s;
+}
+
+@media  (max-width: 1024px) {
+  .card {
+    width: calc(50% - 2rem);
+    min-width: 300px;
+  }
+
+}
+
+.card__top {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  margin-bottom: 2rem;
+  h5:nth-child(1) {
+    font-size: 1.8rem;
+    font-weight: 500;
+  }
+  p:nth-child(2) {
+    font-size: 1.4rem;
+    color: #4f5665;
+  }
+  .cards__card-star {
+    display: flex;
+    position: absolute;
+    right: 3rem;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.6rem;
+    font-weight: 400;
+  }
+  @media (max-width: 768px) {
+    .cards__card-star {
+      right: 1rem;
+    }
+
+  }
+}
+.card__bottom {
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+.buttoms {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 6rem;
+}
+@media (max-width: 768px) {
+  .buttoms {
+    display: none;
+  }    
+  .card__top {
+      gap: 1rem;
+    }
+}
+.bu-cheack {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+.bu-left {
+  padding: 2rem;
+  border-radius: 50%;
+  background-color: #f53855;
+}
+
+/* end section Happy Customer */

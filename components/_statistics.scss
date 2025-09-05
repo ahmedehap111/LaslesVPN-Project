@@ -1,0 +1,73 @@
+/* section statistics */
+.section__sraristics-box-shadow {
+  box-shadow: 0 20px 24px rgba(13, 16, 37, 0.1);
+  padding: 5rem 25rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  transition: transform 1s;
+}
+
+@media  (max-width: 1024px) {
+  .section__sraristics-box-shadow {
+    padding: 4rem;
+    width: 90%;
+  }
+
+}
+
+@media (max-width: 768px) {
+  .section__sraristics-box-shadow {
+    padding: 2rem 1rem;
+  }
+}
+
+.section__statistics {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20rem;
+}
+
+@media  (max-width: 1024px) {
+  .section__statistics {
+    gap: 4rem;
+    & > div:not(:last-child) {
+      padding-right: 3rem;
+    }
+  }
+
+}
+
+@media (max-width: 768px) {
+  .section__statistics {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+}
+
+.section__statistics > div {
+  display: flex;
+  gap: 1rem;
+  &:not(:last-child) {
+    border-right: rgba(79, 86, 101, 0.4) 0.1px solid;
+    padding-right: 13rem;
+  }
+}
+@media (max-width: 768px) {
+  .section__statistics > div:not(:last-child) {
+    padding-right: 0rem;
+    border-right: none;
+  }
+}
+
+.numbers-that-matter h4 {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+.numbers-that-matter p {
+  font-size: 2rem;
+  color: #4f5665;
+}
+
+/* end section statistics */

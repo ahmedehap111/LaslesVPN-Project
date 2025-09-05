@@ -1,0 +1,113 @@
+/* header */
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.navigation {
+  display: flex;
+  gap: 8rem;
+  font-size: 1.6rem;
+}
+
+@media  (max-width: 1024px) {
+ .navigation {
+    gap: 4rem;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .navigation {
+    display: none;
+  }
+}
+.navigation__links {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+
+  & a {
+    text-decoration: none;
+    color: #4f5665;
+  }
+}
+
+@media  (max-width: 1024px) {
+ .navigation__links {
+    gap: 2rem;
+  }
+}
+
+.login {
+  display: flex;
+  gap: 1.4rem;
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+.login__in {
+  text-decoration: none;
+  align-self: center;
+}
+.login__up {
+  text-decoration: none;
+  padding: 1.5rem 4rem;
+  color: #f53855;
+  border: #f53855 1px solid;
+  border-radius: 5rem;
+}
+
+.burger-menu__checkbox {
+  display: none;
+}
+@media (max-width: 768px) {
+  .navigation {
+    display: none;
+    transition: top 10s linear;
+  }
+  .burger-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-right: 1rem;
+    cursor: pointer;
+  }
+  .burger-menu__bar {
+    width: 6rem;
+    height: 0.5rem;
+    background-color: black;
+    border-radius: 1rem;
+    transition: .3s linear;
+  }
+
+  .header:has(.burger-menu__checkbox:checked) .burger-menu__bar:nth-child(1) {
+    transform: translateY(14px) rotate(42deg);
+  }
+
+  .header:has(.burger-menu__checkbox:checked) .burger-menu__bar:nth-child(2) {
+    opacity: 0;
+    visibility: hidden;
+  }
+  .header:has(.burger-menu__checkbox:checked) .burger-menu__bar:nth-child(3) {
+    transform: translateY(-10px) rotate(-40deg);
+  }
+  .header:has(.burger-menu__checkbox:checked) .navigation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 11rem;
+    width: 100vw;
+    background-color: #fff;
+    padding-bottom: 2rem ;
+    border-bottom: 1px solid #f53855;
+  }
+  .header:has(.burger-menu__checkbox:checked) .navigation__links,
+  .header:has(.burger-menu__checkbox:checked) .login{
+    display: flex;
+    flex-direction: column;
+  }
+
+
+}
+/* end header */
